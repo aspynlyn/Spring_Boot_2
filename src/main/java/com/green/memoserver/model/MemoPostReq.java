@@ -9,7 +9,6 @@ import lombok.ToString;
 @ToString
 
 public class MemoPostReq {
-  private int memoId;
   private String title;
   private String ctnts;
 
