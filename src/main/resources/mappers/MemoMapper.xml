@@ -28,4 +28,11 @@
         FROM memo
         WHERE id = #{id}
     </delete>
+    <update id="modify">
+        UPDATE memo
+        SET
+        title = #{title},
+        content = #{ctnts}
+        WHERE id = #{memoId}
+    </update>
 </mapper>

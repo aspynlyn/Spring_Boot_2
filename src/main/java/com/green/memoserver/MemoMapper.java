@@ -1,9 +1,6 @@
 package com.green.memoserver;
 
-import com.green.memoserver.model.MemoGetOneRes;
-import com.green.memoserver.model.MemoGetReq;
-import com.green.memoserver.model.MemoGetRes;
-import com.green.memoserver.model.MemoPostReq;
+import com.green.memoserver.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -14,4 +11,7 @@ public interface MemoMapper {
   List<MemoGetRes> findAll(MemoGetReq p);
   MemoGetOneRes findById(int id);
   int deleteById(int id);
+  int modify(MemoPutReq id);
+
+  // insert update delete는 무조건 int(영향받은 행 기준이므로)
 }
